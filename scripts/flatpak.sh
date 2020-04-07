@@ -1,5 +1,7 @@
 #!/bin/bash
 FLATPAK_OPTS="--user --verbose -y"
+
+sudo $INSTALL_CMD flatpak
 flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak $FLATPAK_OPTS install flathub com.slack.Slack

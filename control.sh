@@ -7,7 +7,7 @@
 
 SHELL=/bin/bash
 SECTION=all
-SCRIPTS_ORDER="packages services docker vscodium mount-utils terminal-tools gui-tools dev-tools chromium symlinks zshell flatpak env"
+SCRIPTS_ORDER="packages services docker vscodium mount-utils terminal-tools gui-tools dev-tools chromium symlinks zshell flatpak env virtualbox"
 
 export LIST_PKGS_CMD="rpm -qa"
 export UPDATE_CMD="dnf -y update"
@@ -89,6 +89,9 @@ env)
    ;;
 flatpak)
 	execute flatpak
+   ;;
+virtualbox)
+	execute virtualbox
    ;;
 *) echo "Wrong action. Exiting..."
    ;;

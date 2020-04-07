@@ -19,7 +19,3 @@ fi
 if ! $LIST_PKGS_CMD | grep -q rpmfusion-nonfree; then
 	sudo $INSTALL_CMD https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 fi
-
-if ! grep -qiR virtualbox /etc/yum.repos.d; then
-	sudo dnf config-manager --add-repo https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
-fi
