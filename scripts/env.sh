@@ -10,4 +10,5 @@ git clone $CONFS_GIT_URL/$CONFS_GIT_REPO $HOME/$CONFS_GIT_REPO
 # git repo to your $HOME
 if [[ ! -z $OVERWRITE && $OVERWRITE == 'Y' ]]; then
   rsync --exclude '.git'  -avI $HOME/$CONFS_GIT_REPO/.[^.]* ~/
+	chmod 600 /home/$USER/.ssh/config
 fi
