@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ ! -z $INSTALL_CMD ]; then
+if [ ! -z "$INSTALL_CMD" ]; then
 	sudo $INSTALL_CMD zsh zsh-lovers
 fi
 
