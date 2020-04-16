@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ ! -z "$INSTALL_CMD" ] && [ ! $($LIST_PKGS_CMD | grep -q zsh) ]; then
+if [ ! -z "$INSTALL_CMD" ] && [ $($LIST_PKGS_CMD | grep -q zsh) ]; then
 	sudo $INSTALL_CMD zsh zsh-lovers
 fi
 
