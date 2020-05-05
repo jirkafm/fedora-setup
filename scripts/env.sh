@@ -6,6 +6,11 @@ CONFS_GIT_ENV_DIR=$HOME/.jirkafm/$CONFS_GIT_REPO
 
 git clone $CONFS_GIT_URL/$CONFS_GIT_REPO $CONFS_GIT_ENV_DIR 
 
+# Install tmux tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 # This can be very dangerous as it may overwrite your environment
 # settings if you are sure set OVERWRITE=Y to get dot files from
 # git repo to your $HOME
