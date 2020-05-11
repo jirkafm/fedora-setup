@@ -18,3 +18,9 @@ if [[ ! -z $OVERWRITE && $OVERWRITE == 'Y' ]]; then
   rsync --exclude '.git'  -avI $CONFS_GIT_ENV_DIR/.[^.]* ~/
 	chmod 600 /home/$USER/.ssh/config
 fi
+
+# Install vim plugins related dependencies
+if [[ $INSTALL_VIM_DEPS == 'Y' ]]; then
+	sudo $INSTALL_CMD make cmake python-devel gcc g++ nodejs curl xdg-utils
+	sudo npm -g install instant-markdown-d
+fi
