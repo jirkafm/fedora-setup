@@ -21,6 +21,6 @@ fi
 
 # Install vim plugins related dependencies
 if [[ $INSTALL_VIM_DEPS == 'Y' ]]; then
-	sudo $INSTALL_CMD make cmake python-devel gcc g++ nodejs curl xdg-utils
+	sudo $INSTALL_CMD make cmake python-devel gcc g++ nodejs curl xdg-utils the_silver_searcher
 	sudo npm -g install instant-markdown-d
 fi
