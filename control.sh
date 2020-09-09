@@ -7,7 +7,7 @@
 
 SHELL=/bin/bash
 SECTION=all
-SCRIPTS_ORDER="packages services docker vscodium mount-utils terminal-tools gui-tools dev-tools chromium symlinks zshell flatpak env virtualbox"
+SCRIPTS_ORDER="packages services docker mount-utils terminal-tools gui-tools dev-tools symlinks zshell flatpak env virtualbox"
 
 export LIST_PKGS_CMD="rpm -qa"
 export UPDATE_CMD="dnf -y update"
@@ -60,9 +60,6 @@ services)
 docker) 
 	execute docker
    ;;
-vscodium) 
-	execute vscodium
-   ;;
 mount-utils) 
 	execute mount-utils
    ;;
@@ -74,9 +71,6 @@ gui-tools)
    ;;
 dev-tools)
 	execute dev-tools
-   ;;
-chromium)
-	execute chromium
    ;;
 symlinks)
 	execute symlinks
